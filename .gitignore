@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.env
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# generated data and run artefacts
+data/*.csv
+data/*.json
+_smoke/
+results/*
+!results/.gitkeep
+!results/benchmark.md
+!results/figures/
+results/figures/*
+!results/figures/*.png
