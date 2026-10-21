@@ -138,7 +138,9 @@ def build_parser() -> argparse.ArgumentParser:
     p_attr = sub.add_parser("attribute", help="Shapley attribution of a metric change")
     p_attr.add_argument("--data", default="data/ad_metrics.csv")
     p_attr.add_argument("--dim", default="keyword_pack")
-    p_attr.add_argument("--metric", default="cpa", choices=["cpa", "spend", "clicks", "conversions"])
+    p_attr.add_argument(
+        "--metric", default="cpa", choices=["cpa", "spend", "clicks", "conversions"]
+    )
     p_attr.add_argument("--window", type=int, default=28)
     p_attr.set_defaults(func=_cmd_attribute)
 

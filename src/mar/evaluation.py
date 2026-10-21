@@ -143,7 +143,8 @@ def evaluate(
                 covered[key] |= mask
 
     false_alarms = sum(
-        int(np.sum(flags.to_numpy(dtype=bool) & ~covered[key])) for key, flags in flags_by_series.items()
+        int(np.sum(flags.to_numpy(dtype=bool) & ~covered[key]))
+        for key, flags in flags_by_series.items()
     )
     clean_days = sum(int(np.sum(~covered[key])) for key in flags_by_series)
     point = PointScore(tp=tp, fp=fp, fn=fn)

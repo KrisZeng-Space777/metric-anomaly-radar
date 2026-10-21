@@ -14,9 +14,9 @@ benchmark can score detectors per series instead of per raw row.
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
-from datetime import date, timedelta
-from typing import Callable
+from collections.abc import Callable
+from dataclasses import dataclass
+from datetime import date
 
 import numpy as np
 import pandas as pd
