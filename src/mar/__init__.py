@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from . import synth
+from . import anomalies, synth
 
 __version__ = "0.1.0"
 
-__all__ = ["synth", "__version__"]
+__all__ = ["anomalies", "synth", "__version__"]
